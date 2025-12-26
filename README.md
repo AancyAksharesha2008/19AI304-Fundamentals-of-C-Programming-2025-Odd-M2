@@ -372,26 +372,25 @@ int main()
   
 #program:
 ```
+
 #include <stdio.h>
 
-int main()
-{
-    int i, j;
+int main() {
+    int n = 7;  // Maximum number in the pattern
 
-    for (i = 7; i >= 0; i--)
-    {
-        /* Left side numbers */
-        for (j = i; j <= 7; j++)
-        {
-            if (j == 7)
-                printf("0 ");
-            else
-                printf("%d ", j);
+    for (int i = 0; i <= n; i++) {
+        int start = n - i;
+
+        // Print ascending numbers from start to n
+        for (int j = start; j <= n; j++) {
+            printf("%d ", j);
         }
 
-        /* Right side numbers */
-        for (j = 7; j > i; j--)
-        {
+        // Print 0 in the middle
+        printf("0 ");
+
+        // Print descending numbers from n to start
+        for (int j = n; j >= start; j--) {
             printf("%d ", j);
         }
 
@@ -400,9 +399,14 @@ int main()
 
     return 0;
 }
+
+
 ```
 #output:
-<img width="353" height="213" alt="image" src="https://github.com/user-attachments/assets/9be277dc-5dc8-479f-b64c-de154e86e9df" />
+
+![WhatsApp Image 2025-12-26 at 9 42 21 PM](https://github.com/user-attachments/assets/0211b69b-0c50-45b5-ba0f-9f34ec560ddb)
+
+
 
 
   
